@@ -21,7 +21,7 @@ import {
 } from './data/constants';
 import { updatePathWithQueryParams } from './data/utils';
 import { ForgotPasswordPage } from './forgot-password';
-import Logistration from './logistration/Logistration';
+#import Logistration from './logistration/Logistration';
 import { ProgressiveProfiling } from './progressive-profiling';
 import { RecommendationsPage } from './recommendations';
 import { EmbeddableRegistrationPage } from './register';
@@ -43,11 +43,11 @@ const MainApp = () => (
         path={REGISTER_EMBEDDED_PAGE}
         element={<EmbeddedRegistrationRoute><EmbeddableRegistrationPage /></EmbeddedRegistrationRoute>}
       />
-      <Route
-        path={LOGIN_PAGE}
-        element={
-          <UnAuthOnlyRoute><Logistration selectedPage={LOGIN_PAGE} /></UnAuthOnlyRoute>
-        }
+     # <Route
+      #  path={LOGIN_PAGE}
+       # element={
+        #  <UnAuthOnlyRoute><Logistration selectedPage={LOGIN_PAGE} /></UnAuthOnlyRoute>
+        # }
       />
       <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><Logistration /></UnAuthOnlyRoute>} />
       <Route path={RESET_PAGE} element={<UnAuthOnlyRoute><ForgotPasswordPage /></UnAuthOnlyRoute>} />
